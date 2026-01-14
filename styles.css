@@ -1,0 +1,333 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== GENERAL ===== */
+body {
+  background: #f4f6f9;
+  padding: 30px;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ===== HEADER ===== */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.top h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* ===== BOTONES ===== */
+.btn {
+  padding: 14px 22px;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.blue { background: #2563eb; color: #fff; }
+.green { background: #16a34a; color: #fff; }
+.gray { background: #6b7280; color: #fff; }
+
+/* ===== BUSCADOR ===== */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  width: 100%;
+}
+
+/* ===== TABLA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 18px;
+  text-align: center;
+  font-size: 17px;
+}
+
+th {
+  background: #e5e7eb;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* ===== TARJETAS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 17px;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  width: 650px;              /* MÁS GRANDE */
+  padding: 35px;
+  border-radius: 20px;
+  animation: scaleIn 0.2s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== MODAL HEADER ===== */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  font-size: 28px;
+}
+
+.close {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== MODAL BODY ===== */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.modal-body label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="number"],
+.modal-body input[type="file"] {
+  padding: 16px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  width: 100%;
+}
+
+/* FILA DOBLE */
+.modal-row {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-row div {
+  flex: 1;
+}
+
+/* ===== MODAL FOOTER ===== */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.modal-footer .btn {
+  font-size: 18px;
+  padding: 14px 26px;
+}
+
+/* ===== UTIL ===== */
+.hidden {
+  display: none;
+}
+.btn.orange {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.btn.orange:hover {
+  background-color: #d97706;
+}
+/* ===== EDITAR ===== */
+.edit-text {
+  color: #f39c12;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-text:hover {
+  text-decoration: underline;
+}
+
+.edit-btn {
+  background: #f39c12;
+  color: white;
+}
+/* =====ELIMINAR===== */
+.actions-cell {
+  display: flex;
+  gap: 15px;
+}
+
+.edit-text {
+  color: #f59e0b;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete-text {
+  color: #ef4444;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* BOTONES TARJETA */
+.btn.orange {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn.red {
+  background: #ef4444;
+  color: white;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+/* Imagen pequeña en la tabla */
+.table-img {
+  width: 55px;
+  height: 35px;
+}
+
+/* Centrar la imagen en la celda */
+table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Forzar layout fijo para que no se rompa */
+table {
+  table-layout: fixed;
+}
+
+/* Columna de imagen con ancho fijo */
+table th:first-child,
+table td:first-child {
+  width: 80px;
+  min-width: 70px;
+  max-width: 70px;
+  padding: 10px;
+}
+
+/* Imagen controlada */
+.table-img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: auto;
+}
+
+/* Evitar que texto o imagen estiren columnas */
+table th,
+table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Hover sobre filas */
+tbody tr:hover {
+  background: #e0f2fe; /* azul clarito */
+}
+
+/* Ajuste de imagen pequeña */
+.table-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+}
+/* Imagen dentro de la tarjeta */
+.img-card {
+  width: 120px;          /* ancho fijo */
+  height: 120px;         /* alto fijo */
+  object-fit: cover;     /* recorta la imagen sin deformar */
+  border-radius: 10px;   /* esquinas redondeadas */
+  display: block;
+  margin: 0 auto 15px;   /* centrada horizontalmente y con espacio abajo */
+}
+

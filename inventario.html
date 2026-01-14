@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Inventario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="top">
+    <h1>Sistema de Inventario</h1>
+    <div class="top-buttons">
+      <button id="toggleView" class="btn gray">☷ Vista Tarjetas</button>
+      <button id="exportCSV" class="btn green">Exportar CSV</button>
+      <label class="btn blue">
+        Importar CSV
+        <input type="file" id="importCSV" hidden>
+      </label>
+      <button id="addItem" type="button" class="btn blue">＋ Agregar Artículo</button>
+    </div>
+  </header>
+
+  <div class="search-bar">
+    🔍
+    <input type="text" id="searchInput" placeholder="Buscar artículos por nombre...">
+  </div>
+
+  <!-- TABLA -->
+  <div id="tableView">
+    <table>
+      <thead>
+        <tr>
+          <th>IMAGEN</th>
+          <th>NOMBRE</th>
+          <th>CATEGORÍA</th>
+          <th>CANT. NECESARIA</th>
+          <th>CANT. DISPONIBLE</th>
+          <th>FECHA</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- TARJETAS -->
+  <div id="cardView" class="cards hidden"></div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h2 id="modalTitle">Nuevo Artículo</h2>
+      <span id="closeModal" class="close">✕</span>
+    </div>
+
+    <div class="modal-body">
+      <label>Nombre del Artículo</label>
+      <input type="text" id="modalNombre" placeholder="Ingresa el nombre...">
+
+      <label>Categoría</label>
+      <input type="text" id="modalCategoria" placeholder="Ingresa la categoría..."> <!-- ✅ CORREGIDO -->
+
+      <div class="modal-row">
+        <div>
+          <label>Cantidad Necesaria</label>
+          <input type="number" id="modalNecesarios" value="0">
+        </div>
+        <div>
+          <label>Cantidad Disponible</label>
+          <input type="number" id="modalDisponibles" value="0">
+        </div>
+      </div>
+
+      <label>Imagen del Artículo</label>
+      <input type="file" id="modalImagen" accept="image/*">
+    </div>
+
+    <div class="modal-footer">
+      <button id="cancelModal" class="btn gray">Cancelar</button>
+      <button id="saveModal" class="btn blue">Guardar</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
